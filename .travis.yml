@@ -6,4 +6,4 @@ before_install:
   - docker build -t mbmclaugh6/docker-react-tutorial -f Dockerfile.dev .
 
 script:
-  - docker run mbmclaugh6/docker-react-tutorial npm run test -- --coverage
+  - docker run -e CI=true mbmclaugh6/docker-react-tutorial npm run test
